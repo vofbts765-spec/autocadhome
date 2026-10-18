@@ -70,7 +70,7 @@ footer p,footer a{color:var(--muted);font-size:13px}
 footer a:hover{color:var(--cyan)}
 .copyright{border-top:1px solid #ffffff12;margin-top:25px;padding-top:15px;display:flex;justify-content:space-between;gap:12px;color:#8296a8;font-size:12px}
 
-/* Floating WhatsApp Button */
+
 .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:9999;width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:#25D366;color:#fff;border:2px solid #ffffff30;border-radius:50%;box-shadow:0 5px 22px #0006;transition:transform .2s,box-shadow .2s}
 .whatsapp-float svg{width:34px;height:34px}
 .whatsapp-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 8px 28px #25d36655}
@@ -78,14 +78,33 @@ footer a:hover{color:var(--cyan)}
 @media(max-width:850px){.links{gap:14px}.links a:not(.btn){display:none}.hero-grid{grid-template-columns:1fr}.hero{padding-top:55px}.hero-copy{text-align:center}.hero-copy p{margin:auto}.hero-actions{justify-content:center}.drawing{min-height:230px}.blueprint{max-width:390px}.course-card{grid-template-columns:110px 1fr}.course-mark{grid-row:1/3}.price-box{grid-column:2;border-left:0;border-top:1px solid #ffffff15;padding:20px 0 0}.price-box .btn{max-width:280px}.features{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.nav{height:70px}.brand h2{font-size:17px}.logo{font-size:39px}.brand small{font-size:9px}.nav>.btn{padding:10px 12px;font-size:12px}.hero{padding:45px 0 25px}.hero h1{font-size:42px}.hero p{font-size:14px}.drawing{min-height:190px}.section{padding:30px 0}.course-card{grid-template-columns:1fr;padding:22px;gap:17px}.course-mark{height:auto;grid-row:auto;border-right:0;border-bottom:1px solid #ffffff12;padding-bottom:15px}.course-mark strong{font-size:58px}.course-info h2{font-size:23px}.price-box{grid-column:auto;padding-top:18px}.price{font-size:34px}.features{grid-template-columns:1fr}.section-heading h2{font-size:26px}.cta{align-items:flex-start;flex-direction:column;padding:23px}.cta h2{font-size:20px}.footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-grid>div:first-child{grid-column:1/-1}.copyright{flex-direction:column}.whatsapp-float{width:54px;height:54px;right:15px;bottom:15px}.whatsapp-float svg{width:30px;height:30px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+#bg-image {position: fixed;right: 0;bottom: 0;min-width: 100%;min-height: 100%;width: auto;height: auto;z-index: -100;object-fit: cover;}
+.video-overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(5, 10, 25, 0.75); z-index: -99;}
+#bg-image {position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;object-fit: cover; z-index: -100;}
+.video-overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(5, 10, 25, 0.75);z-index: -99;}
+body {background: linear-gradient(rgba(10, 15, 30, 0.85), rgba(10, 15, 30, 0.85)), url('your-image.jpg') no-repeat center center fixed;background-size: cover; margin: 0;color: #ffffff;}
+body {margin: 0;padding: 0;font-family: Arial, sans-serif;color: #ffffff;
+    background-image: 
+        linear-gradient(rgba(10, 15, 30, 0.88), rgba(10, 15, 30, 0.88)), 
+        url('your-image.jpg'); 
+    background-size: cover;background-position: center center;background-repeat: no-repeat;background-attachment: fixed; }
+#bg-image {position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;object-fit: cover;z-index: -100; opacity: 0.25;filter: blur(2px);}
+.video-overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #0a0f1e; z-index: -99;opacity: 0.85;}
 </style>
 </head>
 <body>
+
+<img src="https://i.postimg.cc/MGDHPMWf/autocadwebback.jpg" alt="Background Image" id="bg-image">
+
+<div class="video-overlay"></div>
+<div class="grip-bg"></div>
+
+
 <header>
   <div class="container nav">
     <a class="brand" href="#home" aria-label="Abdullah AutoCAD Training home">
       <span class="logo">A</span>
-      <span><h2>ABDULLAH</h2><small>AUTOCAD TRAINING</small></span>
+      <span><h2>ABDULLAH AFRIDI</h2><small>AUTOCAD TRAINING</small></span>
     </a>
     <nav class="links" aria-label="Main navigation">
       <a href="#home">Home</a>
@@ -102,7 +121,8 @@ footer a:hover{color:var(--cyan)}
     <div class="hero-copy">
       <div class="eyebrow">Professional Design • Precise Results</div>
       <h1>Master <span>AutoCAD</span><br>Build Your Future</h1>
-      <p>Develop practical drafting and technical drawing skills with our AutoCAD Full Course, designed for aspiring engineers, architects and designers.</p>
+      <p>Master AutoCAD 2D & 3D: Build Future-Ready Drafting Skills Today!
+Transform your passion for architecture and civil engineering into a high-demand professional career. Our comprehensive AutoCAD Masterclass guides you seamlessly from fundamental 2D floor plans, front elevations, and complex cross-sections to advanced 3D solid modeling. Gain hands-on experience with real-world industry projects, build an outstanding portfolio, and gain the technical confidence to land top drafting jobs worldwide.</p>
       <div class="hero-actions">
         <a class="btn" href="#course">Explore Course ↓</a>
         <a class="btn-outline" href="#features">Discover Benefits</a>
@@ -136,22 +156,27 @@ footer a:hover{color:var(--cyan)}
 
 <section class="section container" id="course">
   <div class="course-card">
-    <div class="course-mark"><strong>A</strong><span>AUTOCAD</span><span>FULL COURSE</span></div>
+    <div class="course-mark"><strong>A</strong><span>AUTOCAD</span><span>FULL COURSE</span><span><center>Beginner to Advance</center></span></div>
     <div class="course-info">
       <h2>AutoCAD Full Course</h2>
+      <h2>2 Months Course</h2>
       <ul>
         <li>2D Drafting and Technical Drawing</li>
+        <li>3D Modelling</li>
         <li>Essential AutoCAD Tools and Commands</li>
         <li>Drawing, Editing and Dimensioning</li>
         <li>Practical Drawing Exercises</li>
         <li>Beginner-Friendly Learning Path</li>
+        <li>Project</li>
       </ul>
     </div>
     <div class="price-box">
       <div class="label">Course Fee</div>
-      <div class="price">PKR 10,000</div>
-      <p>Full course fee: PKR 10,000</p>
+      <div class="price">PKR 15k</div>
+      <p>Full course fee: PKR 15k</p>
       <a class="btn" href="https://vofbts765-spec.github.io/autocadregister/">Enroll Now <span>→</span></a>
+      <br><br>
+      <p>Instructor & Trainer: Abdullah Afridi</p>
     </div>
   </div>
 </section>
@@ -193,7 +218,7 @@ footer a:hover{color:var(--cyan)}
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="#home"><span class="logo">A</span><span><h2>ABDULLAH</h2><small>AUTOCAD TRAINING</small></span></a>
+        <a class="brand" href="#home"><span class="logo">A</span><span><h2>ABDULLAH AFRIDI</h2><small>AUTOCAD TRAINING</small></span></a>
         <p style="margin-top:15px">AutoCAD training for aspiring engineers, architects and designers.</p>
       </div>
       <div>
@@ -213,9 +238,9 @@ footer a:hover{color:var(--cyan)}
   </div>
 </footer>
 
-<!-- WhatsApp floating button -->
+
 <a class="whatsapp-float"
-   href="https://wa.me/923303033396?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20your%20AutoCAD%20Full%20Course.%20Please%20share%20the%20course%20details."
+   href="https://wa.me/923339559491?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20your%20AutoCAD%20Full%20Course.%20Please%20share%20the%20course%20details."
    target="_blank"
    rel="noopener noreferrer"
    aria-label="Contact Abdullah on WhatsApp"
