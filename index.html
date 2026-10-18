@@ -69,8 +69,14 @@ footer p,footer a{color:var(--muted);font-size:13px}
 .footer-links{display:grid;gap:7px}
 footer a:hover{color:var(--cyan)}
 .copyright{border-top:1px solid #ffffff12;margin-top:25px;padding-top:15px;display:flex;justify-content:space-between;gap:12px;color:#8296a8;font-size:12px}
+
+/* Floating WhatsApp Button */
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:9999;width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:#25D366;color:#fff;border:2px solid #ffffff30;border-radius:50%;box-shadow:0 5px 22px #0006;transition:transform .2s,box-shadow .2s}
+.whatsapp-float svg{width:34px;height:34px}
+.whatsapp-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 8px 28px #25d36655}
+.whatsapp-float:focus-visible{outline:3px solid #fff;outline-offset:4px}
 @media(max-width:850px){.links{gap:14px}.links a:not(.btn){display:none}.hero-grid{grid-template-columns:1fr}.hero{padding-top:55px}.hero-copy{text-align:center}.hero-copy p{margin:auto}.hero-actions{justify-content:center}.drawing{min-height:230px}.blueprint{max-width:390px}.course-card{grid-template-columns:110px 1fr}.course-mark{grid-row:1/3}.price-box{grid-column:2;border-left:0;border-top:1px solid #ffffff15;padding:20px 0 0}.price-box .btn{max-width:280px}.features{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.nav{height:70px}.brand h2{font-size:17px}.logo{font-size:39px}.brand small{font-size:9px}.nav>.btn{padding:10px 12px;font-size:12px}.hero{padding:45px 0 25px}.hero h1{font-size:42px}.hero p{font-size:14px}.drawing{min-height:190px}.section{padding:30px 0}.course-card{grid-template-columns:1fr;padding:22px;gap:17px}.course-mark{height:auto;grid-row:auto;border-right:0;border-bottom:1px solid #ffffff12;padding-bottom:15px}.course-mark strong{font-size:58px}.course-info h2{font-size:23px}.price-box{grid-column:auto;padding-top:18px}.price{font-size:34px}.features{grid-template-columns:1fr}.section-heading h2{font-size:26px}.cta{align-items:flex-start;flex-direction:column;padding:23px}.cta h2{font-size:20px}.footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-grid>div:first-child{grid-column:1/-1}.copyright{flex-direction:column}}
+@media(max-width:520px){.nav{height:70px}.brand h2{font-size:17px}.logo{font-size:39px}.brand small{font-size:9px}.nav>.btn{padding:10px 12px;font-size:12px}.hero{padding:45px 0 25px}.hero h1{font-size:42px}.hero p{font-size:14px}.drawing{min-height:190px}.section{padding:30px 0}.course-card{grid-template-columns:1fr;padding:22px;gap:17px}.course-mark{height:auto;grid-row:auto;border-right:0;border-bottom:1px solid #ffffff12;padding-bottom:15px}.course-mark strong{font-size:58px}.course-info h2{font-size:23px}.price-box{grid-column:auto;padding-top:18px}.price{font-size:34px}.features{grid-template-columns:1fr}.section-heading h2{font-size:26px}.cta{align-items:flex-start;flex-direction:column;padding:23px}.cta h2{font-size:20px}.footer-grid{grid-template-columns:1fr 1fr;gap:25px}.footer-grid>div:first-child{grid-column:1/-1}.copyright{flex-direction:column}.whatsapp-float{width:54px;height:54px;right:15px;bottom:15px}.whatsapp-float svg{width:30px;height:30px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
@@ -206,6 +212,21 @@ footer a:hover{color:var(--cyan)}
     <div class="copyright"><span>© <span id="year"></span> Abdullah AutoCAD Training. All rights reserved.</span><span>Designed for future engineers.</span></div>
   </div>
 </footer>
-<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+
+<!-- WhatsApp floating button -->
+<a class="whatsapp-float"
+   href="https://wa.me/923339559491?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20your%20AutoCAD%20Full%20Course.%20Please%20share%20the%20course%20details."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact Abdullah on WhatsApp"
+   title="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M16 .5C7.45.5.5 7.4.5 15.95c0 2.73.72 5.4 2.08 7.76L.4 31.5l8.02-2.1a15.45 15.45 0 0 0 7.57 1.98h.01c8.55 0 15.5-6.95 15.5-15.5C31.5 7.4 24.55.5 16 .5zm0 28.25c-2.34 0-4.64-.63-6.63-1.83l-.48-.28-4.76 1.25 1.27-4.64-.31-.5a12.72 12.72 0 0 1-1.96-6.8C3.13 8.93 8.9 3.16 16 3.16s12.87 5.77 12.87 12.87S23.1 28.75 16 28.75zm7.06-9.64c-.39-.2-2.3-1.14-2.66-1.27-.36-.13-.62-.2-.88.2-.26.39-1.01 1.27-1.24 1.53-.23.26-.46.29-.85.1-.39-.2-1.65-.61-3.14-1.94-1.16-1.04-1.94-2.32-2.17-2.71-.23-.4-.02-.61.17-.8.17-.17.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.69-.1-.2-.88-2.12-1.2-2.9-.31-.76-.63-.66-.88-.67h-.75c-.26 0-.69.1-1.05.49-.36.39-1.38 1.35-1.38 3.27s1.42 3.79 1.61 4.05c.2.26 2.79 4.26 6.76 5.97.94.41 1.68.65 2.25.83.95.3 1.81.26 2.49.16.76-.11 2.3-.94 2.63-1.86.32-.92.32-1.71.23-1.87-.1-.16-.36-.26-.75-.46z"/>
+  </svg>
+</a>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
